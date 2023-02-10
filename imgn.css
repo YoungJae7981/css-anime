@@ -3,39 +3,37 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 .animated-container {
-  width: 1000px;
-  height: 400px;
   position: relative;
-  margin: 20px auto;
+  width: 70%;
+  margin: 30px auto;
+  background-color: dodgerblue;
 }
-.animated-container:nth-child(1) {
+.animated-container img {
+  width: 50%;
+}
+
+.elements {
   position: absolute;
-  background-color: blue;
-  top: 20px;
-  left: 20px;
-}
-.animated-container:nth-child(2) {
-  /* position: absolute; */
-  top: 20px;
-  left: 20px;
-  animation-name: move1;
+  top: 0;
+  left: 0;
+  animation-name: move;
   animation-iteration-count: infinite;
-  animation-duration: 2s;
-  animation-direction: alternate-reverse;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
 }
 
-@keyframes move1 {
-  0% {
-    top: 20px;
+@keyframes move {
+  from {
+    transform: translate(-15%, 0px);
   }
-
   50% {
-    top: 20px;
+    transform: translate(0px, -15%);
   }
 
-  100% {
-    top: 20px;
+  to {
+    transform: translate(-15%, 0px);
   }
 }
+
+/* 0%=from 은 에니메이션의 시작의미하고 100%=to는 에니메이션의 종료를 의미한다. */

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.animated-container {
+  width: 1000px;
+  height: 400px;
+  position: relative;
+  margin: 20px auto;
+}
+.animated-container:nth-child(1) {
+  position: absolute;
+  background-color: blue;
+  top: 20px;
+  left: 20px;
+}
+.animated-container:nth-child(2) {
+  /* position: absolute; */
+  top: 20px;
+  left: 20px;
+  animation-name: move1;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes move1 {
+  0% {
+    top: 20px;
+  }
+
+  50% {
+    top: 20px;
+  }
+
+  100% {
+    top: 20px;
+  }
+}
